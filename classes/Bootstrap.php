@@ -20,7 +20,6 @@ class Bootstrap{
 
         $this->request = $request;
         if ($this->request['controller']==""){
-            // test
             $this->controller='home';
         }else{
             $this->controller=$this->request['controller'];
