@@ -21,6 +21,7 @@ class Bootstrap{
         $this->request = $request;
         if ($this->request['controller']==""){
             $this->controller='home';
+            // pippo
         }else{
             $this->controller=$this->request['controller'];
         }
