@@ -31,6 +31,16 @@ class Bootstrap{
             $this->action=$this->request['action'];
         }
     }
+    public function createController(){
+        if(class_exists($this->controller)){
+            $parents = class_parents($this->controller);
+            if(in_array("Controller",$parents)){
+                if(method_exists($this->controller,http_request_method_name())){
+
+                }
+            }
+        }
+    }
 
 
 }
