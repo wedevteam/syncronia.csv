@@ -15,13 +15,7 @@ require('controllers/home.php');
 require('controllers/shares.php');
 require('controllers/users.php');
 
-require('models/acquisti.php');
-require('models/alerts.php');
-require('models/categorie.php');
-require('models/classi.php');
-require('models/config.php');
-require('models/fornitori.php');
-require('models/prodotti.php');
+
 require('models/users.php');
 
 

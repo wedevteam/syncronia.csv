@@ -11,14 +11,14 @@
 define("DB_HOST","localhost");
 define("DB_USER","root");
 define("DB_PW","aa000125..,,");
-define("DB_NAME","aspis");
+define("DB_NAME","syncronia");
 
 // DB REMOTO
 // TODO: aggiungere definizioni
 
 // URL LOCALE
 define("ROOT_PATH","/");
-define("ROOT_URL","http://localhost/aspis");
+define("ROOT_URL","http://localhost/syncronia/csv");
 
 // URL REMOTO
-define("ROOT_URL","http://www.ym-dev.com/aspis");
+define("ROOT_URL","http://www.ym-dev.com/syncronia/csv");
