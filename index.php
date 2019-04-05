@@ -6,10 +6,15 @@
  * Time: 11:11
  */
 
+// SESSION START
+session_start();
+
 require ('config.php');                 // Configurazione Generale
+
 require ('classes/Bootstrap.php');      // Configurazione controller ed action
 require ('classes/Controller.php');     // Definizione del Controller
 require ('classes/Model.php');          // Definizione del Model
+require ('classes/Messages.php');       // Definizione del Messaggi
 
 require('controllers/home.php');
 require('controllers/shares.php');

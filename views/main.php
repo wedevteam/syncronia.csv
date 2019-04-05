@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>INSPINIA | Dashboard</title>
+    <title>Syncronia | Dashboard</title>
 
     <link href="assets/theme/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/theme/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -47,45 +47,27 @@
                     <div class="dropdown profile-element">
                         <img alt="image" class="rounded-circle" src="assets/theme/img/profile_small.jpg"/>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="block m-t-xs font-bold">Giovanni di Serio</span>
-                            <span class="text-muted text-xs block">Amministratore</span>
+                            <span class="block m-t-xs font-bold"><?php echo $_SESSION['user_data']['nome'];?></span>
+                            <span class="text-muted text-xs block"><?php if($_SESSION['user_data']['tipo']==='A'){
+                                echo "Amministratore";
+                                }else{ echo "Cliente";}?></span>
                         </a>
                     </div>
                     <div class="logo-element">
-                        ASPIS
+                        CSV
                     </div>
                 </li>
 
 
                 <!-- MENU ITEMS -->
                 <li class="active">
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Templates</span></a>
                 </li>
+                <?php if($_SESSION['user_data']['tipo']==='U'):?>
                 <li>
-                    <a href="layouts.html"><i class="fa fa-user-circle"></i> <span class="nav-label">Clienti</span></a>
+                    <a href="layouts.html"><i class="fa fa-user-circle"></i> <span class="nav-label">Files CSV</span></a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-building"></i> <span class="nav-label">Fornitori</span></a>
-                </li>
-                <li>
-                    <a href="mailbox.html"><i class="fa fa-product-hunt"></i> <span class="nav-label">Classi Prodotti </span></a>
-                </li>
-                <li>
-                    <a href="metrics.html"><i class="fa fa-list"></i> <span class="nav-label">Categorie Prodotti</span>  </a>
-                </li>
-                <li>
-                    <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Prodotti</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Acquisti</span></span></a>
-                </li>
-                <li>
-                    <a href="widgets.html"><i class="fa fa-edit"></i> <span class="nav-label">Account</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Statistiche</span></a>
-                </li>
-
+                <?php endif;?>
             </ul>
 
         </div>
@@ -100,7 +82,7 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li style="padding: 20px">
-                        <span class="m-r-sm text-muted welcome-message">Benvenuto in ASPIS</span>
+                        <span class="m-r-sm text-muted welcome-message">Benvenuto in SYNCRONIA / CSV feature</span>
                     </li>
 
                     <li>

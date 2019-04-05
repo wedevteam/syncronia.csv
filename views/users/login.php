@@ -22,20 +22,26 @@
     <div>
         <div>
 
-            <h1 class="logo-name">IN+</h1>
+            <h1 class="logo-name">CSV</h1>
 
         </div>
-        <h3>Benvenuto in Syncronia</h3>
-        <form></form>
-        <?php echo ROOT_URL.ROOT_PATH;?>
-        <form class="m-t" role="form" action="<?php echo ROOT_URL.ROOT_PATH;?>users">
+        <h3>Benvenuto in Syncronia</h3><br/>
+       <!-- --><?php
+/*            foreach ($viewmodel as $item){
+                echo '<br/>'.$item['userID'].'.'.$item['nome'];
+            }
+        */?>
+
+        <form method="POST" >
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="Username" required="">
+                <input type="email" name="email" class="form-control" placeholder="Inserisci Email" required="">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" required="">
+                <input type="password" name="password" class="form-control" placeholder="Inserisci Password" required="">
             </div>
-            <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+            <input type="submit" name="submit" value="Login" class="btn btn-primary block full-width m-b">
+            <?php Messages::displayMsg()?>
+
         </form>
     </div>
 </div>
