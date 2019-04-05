@@ -19,9 +19,10 @@ require ('classes/Messages.php');       // Definizione del Messaggi
 require('controllers/home.php');
 require('controllers/shares.php');
 require('controllers/users.php');
-
+require('controllers/templates.php');
 
 require('models/users.php');
+require('models/templates.php');
 
 
 $bootstrap = new Bootstrap($_GET);      // Viene usata la variabile super global GET per costruire la request di Bootstrap

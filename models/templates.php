@@ -9,13 +9,11 @@
 
 class TemplatesModel extends Model {
     public function Index(){
-        $this->query('SELECT * FROM templates');
+        $this->query('SELECT * FROM template');
         $rows = $this->resultSet();
         return $rows;
     }
     public function Add(){
-        $this->query('SELECT * FROM templates');
-        $rows = $this->resultSet();
-        return $rows;
+
     }
 }
