@@ -33,6 +33,7 @@ abstract class Controller {
      * ad esempio se il controller è "user" e la classe è "create"  deve esistere una cartella "views/user"
      * e dentro questa deve esserci il file "create.php"
      */
+
     protected function returnView($viewmodel,$fullview){
         $view = 'views/'.get_class($this).'/'.$this->action.'.php';
         if ($fullview){
